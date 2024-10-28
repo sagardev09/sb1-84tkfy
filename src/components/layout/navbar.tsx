@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Bell, Search, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+=======
+import { Bell, Search, User } from "lucide-react";
+import { Button } from "../ui/button";
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 export function Navbar() {
   return (
@@ -26,4 +31,8 @@ export function Navbar() {
       </div>
     </header>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225

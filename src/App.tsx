@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Sidebar } from './components/layout/sidebar';
 import { Navbar } from './components/layout/navbar';
@@ -24,3 +25,13 @@ function App() {
 }
 
 export default App;
+=======
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+export default App;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225

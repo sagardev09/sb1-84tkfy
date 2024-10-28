@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
@@ -9,6 +10,19 @@ const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 
 const SelectValue = SelectPrimitive.Value
+=======
+import * as React from "react";
+import * as SelectPrimitive from "@radix-ui/react-select";
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
+
+import { cn } from "../../lib/utils";
+
+const Select = SelectPrimitive.Root;
+
+const SelectGroup = SelectPrimitive.Group;
+
+const SelectValue = SelectPrimitive.Value;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
@@ -27,8 +41,13 @@ const SelectTrigger = React.forwardRef<
       <ChevronDown className="h-4 w-4 opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
+<<<<<<< HEAD
 ))
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
+=======
+));
+SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
@@ -44,8 +63,13 @@ const SelectScrollUpButton = React.forwardRef<
   >
     <ChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollUpButton>
+<<<<<<< HEAD
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
+=======
+));
+SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectScrollDownButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
@@ -61,9 +85,15 @@ const SelectScrollDownButton = React.forwardRef<
   >
     <ChevronDown className="h-4 w-4" />
   </SelectPrimitive.ScrollDownButton>
+<<<<<<< HEAD
 ))
 SelectScrollDownButton.displayName =
   SelectPrimitive.ScrollDownButton.displayName
+=======
+));
+SelectScrollDownButton.displayName =
+  SelectPrimitive.ScrollDownButton.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
@@ -94,8 +124,13 @@ const SelectContent = React.forwardRef<
       <SelectScrollDownButton />
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
+<<<<<<< HEAD
 ))
 SelectContent.displayName = SelectPrimitive.Content.displayName
+=======
+));
+SelectContent.displayName = SelectPrimitive.Content.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
@@ -106,8 +141,13 @@ const SelectLabel = React.forwardRef<
     className={cn("px-2 py-1.5 text-sm font-semibold", className)}
     {...props}
   />
+<<<<<<< HEAD
 ))
 SelectLabel.displayName = SelectPrimitive.Label.displayName
+=======
+));
+SelectLabel.displayName = SelectPrimitive.Label.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
@@ -128,8 +168,13 @@ const SelectItem = React.forwardRef<
     </span>
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
+<<<<<<< HEAD
 ))
 SelectItem.displayName = SelectPrimitive.Item.displayName
+=======
+));
+SelectItem.displayName = SelectPrimitive.Item.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
@@ -140,8 +185,13 @@ const SelectSeparator = React.forwardRef<
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
     {...props}
   />
+<<<<<<< HEAD
 ))
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
+=======
+));
+SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
 export {
   Select,
@@ -154,4 +204,8 @@ export {
   SelectSeparator,
   SelectScrollUpButton,
   SelectScrollDownButton,
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
