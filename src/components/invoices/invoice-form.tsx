@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Label } from '../ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-import { InvoicePreview } from './invoice-preview';
-
-const businessTypes = [
-  { id: 'retail', name: 'Retail', fields: ['itemName', 'quantity', 'unitPrice'] },
-  { id: 'service', name: 'Service', fields: ['serviceName', 'hours', 'ratePerHour'] },
-  { id: 'consulting', name: 'Consulting', fields: ['projectName', 'consultingHours', 'ratePerHour'] },
-];
-
-const invoiceStyles = [
-  { id: 'modern', name: 'Modern Minimal' },
-  { id: 'professional', name: 'Professional' },
-  { id: 'classic', name: 'Classic' },
-  { id: 'creative', name: 'Creative' },
-];
-
-export function InvoiceForm() {
-  const [businessType, setBusinessType] = React.useState('retail');
-  const [invoiceStyle, setInvoiceStyle] = React.useState('modern');
-  const [items, setItems] = React.useState([{ id: 1 }]);
-  const [formData, setFormData] = React.useState({
-    invoiceNumber: '',
-    date: '',
-    customerName: '',
-    email: '',
-    address: '',
-    items: [],
-  });
-
-=======
 import React from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -112,14 +77,10 @@ export function InvoiceForm() {
     }
   };
 
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
   const addItem = () => {
     setItems([...items, { id: items.length + 1 }]);
   };
 
-<<<<<<< HEAD
-  const selectedType = businessTypes.find(type => type.id === businessType);
-=======
   const downloadInvoice = useCallback(async () => {
     const InvoiceComponent =
       {
@@ -139,7 +100,6 @@ export function InvoiceForm() {
   }, [formData, invoiceStyle, businessType, logo, companyInfo]);
 
   const selectedType = businessTypes.find((type) => type.id === businessType);
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -148,8 +108,6 @@ export function InvoiceForm() {
     });
   };
 
-<<<<<<< HEAD
-=======
   // Update handleInputChange to handle items properly
   const handleItemChange = (itemId: number, field: string, value: string) => {
     const updatedItems = items.map((item) => {
@@ -168,7 +126,6 @@ export function InvoiceForm() {
     setFormData((prev) => ({ ...prev, items: updatedItems }));
   };
 
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div className="space-y-6">
@@ -206,12 +163,6 @@ export function InvoiceForm() {
 
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
-<<<<<<< HEAD
-            <Label>Invoice Number</Label>
-            <Input 
-              name="invoiceNumber"
-              placeholder="INV-001" 
-=======
             <Label>Company Logo</Label>
             <Input
               type="file"
@@ -267,35 +218,17 @@ export function InvoiceForm() {
             <Input
               name="invoiceNumber"
               placeholder="INV-001"
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
               onChange={handleInputChange}
             />
           </div>
           <div className="space-y-2">
             <Label>Date</Label>
-<<<<<<< HEAD
-            <Input 
-              type="date" 
-              name="date"
-              onChange={handleInputChange}
-            />
-=======
             <Input type="date" name="date" onChange={handleInputChange} />
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
           </div>
         </div>
 
         <div className="space-y-2">
           <Label>Customer Information</Label>
-<<<<<<< HEAD
-          <Input 
-            placeholder="Customer Name" 
-            name="customerName"
-            onChange={handleInputChange}
-          />
-          <Input 
-            placeholder="Email" 
-=======
           <Input
             placeholder="Customer Name"
             name="customerName"
@@ -303,18 +236,12 @@ export function InvoiceForm() {
           />
           <Input
             placeholder="Email"
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
             name="email"
             type="email"
             onChange={handleInputChange}
           />
-<<<<<<< HEAD
-          <Input 
-            placeholder="Address" 
-=======
           <Input
             placeholder="Address"
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
             name="address"
             onChange={handleInputChange}
           />
@@ -329,18 +256,6 @@ export function InvoiceForm() {
           </div>
 
           {items.map((item) => (
-<<<<<<< HEAD
-            <div key={item.id} className="space-y-4 p-4 border rounded-lg">
-              {selectedType?.fields.map((field) => (
-                <div key={field} className="space-y-2">
-                  <Label>{field.charAt(0).toUpperCase() + field.slice(1)}</Label>
-                  <Input 
-                    name={`${field}_${item.id}`}
-                    onChange={handleInputChange}
-                  />
-                </div>
-              ))}
-=======
             <div
               key={item.id}
               className="space-y-4 p-6 border rounded-lg bg-gray-50"
@@ -372,7 +287,6 @@ export function InvoiceForm() {
                   </div>
                 ))}
               </div>
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
             </div>
           ))}
         </div>
@@ -388,31 +302,17 @@ export function InvoiceForm() {
         <div className="sticky top-24">
           <h3 className="text-lg font-semibold mb-4">Live Preview</h3>
           <div className="bg-white rounded-lg shadow-lg p-6 mb-4">
-<<<<<<< HEAD
-            <InvoicePreview 
-              data={formData}
-=======
             <InvoicePreview
               data={{ ...formData, logo, companyInfo }}
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
               style={invoiceStyle}
               businessType={businessType}
             />
           </div>
-<<<<<<< HEAD
-          <Button className="w-full">
-            Download PDF
-=======
           <Button className="w-full" onClick={downloadInvoice}>
             Download Invoice
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
           </Button>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d0f1276b630fdf02751cec37bd7865b1b61f1225
